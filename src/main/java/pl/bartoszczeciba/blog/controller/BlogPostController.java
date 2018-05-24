@@ -39,6 +39,6 @@ public class BlogPostController {
 
     @PutMapping("/{title}")
     public void updateBlogPost(@PathVariable String title){
-
     }
+
 }

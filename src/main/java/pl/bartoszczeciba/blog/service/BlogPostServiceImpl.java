@@ -15,9 +15,9 @@ public class BlogPostServiceImpl implements BlogPostService {
         return null;
     }
 
-    public BlogPost getOneBlogPost(String title) {
-        return null;
-    }
+        public BlogPost getOneBlogPost(String title) {
+            return null;
+        }
 
     public void saveBlogPost(BlogPost blogPost) {
 
@@ -28,4 +28,11 @@ public class BlogPostServiceImpl implements BlogPostService {
     }
 
     public void updateBlogPost(){}
+
+    private void inicjalization(){
+
+    }
 }
+//bez tytułu
+//bez treści
+//nie może się zaczynać
