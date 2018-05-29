@@ -21,19 +21,31 @@ public class BlogPostServiceImpl implements BlogPostService {
     }
 
     public void saveBlogPost(BlogPost blogPost) {
-        if(blogPost.getText() != null && blogPost.getTitle() != null )
-        {
+        if (blogPost.getText() != null && blogPost.getTitle() != null) {
             blogPostList.add(blogPost);
         }
     }
 
     public boolean deleteBlogPostById(String title) {
-        return true;
+        for (BlogPost iterator : blogPostList) {
+            if (iterator.getTitle().equals(title)) {
+                blogPostList.remove(iterator);
+                return true;
+            }
+        }
+        return false;
     }
 
-    public void updateBlogPost(){}
+    public void updateBlogPost(String title, BlogPost blogPost) {
+        for (BlogPost iterator : blogPostList) {
+            if (iterator.getTitle().equals(title)) {
+                blogPostList.remove(iterator);
+                blogPostList.add(blogPost);
+            }
+        }
+    }
 
-    private void inicjalization(){
+    private void inicjalization() {
 
     }
 }
